@@ -1,5 +1,5 @@
 {
-  "name": "vue",
+  "name": "frontend-vue",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -13,8 +13,8 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "pinia": "^2.1.7",
-    "vue": "^3.4.15"
+    "vue": "^3.4.15",
+    "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.3",
