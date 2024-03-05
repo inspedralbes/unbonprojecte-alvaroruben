@@ -14,7 +14,7 @@ class InterpreteController extends Controller
      */
     public function index()
     {
-        //
+        return Interprete::all();
     }
 
     /**
