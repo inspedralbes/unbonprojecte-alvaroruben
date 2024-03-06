@@ -1,0 +1,51 @@
+services:
+
+  phpmyadmin:
+    container_name: phpmyadmin
+    image: arm64v8/phpmyadmin       
+    restart: always
+    ports:
+      - 9091:80
+    depends_on:
+      - db
+
+  laravel:
+    container_name: laravel
+    build: ./backend-laravel
+    volumes:
+      - ./backend-laravel:/var/www/html
+    ports:
+      - 8000:80
+    environment:
+      - APACHE_DOCUMENT_ROOT=/var/www/html/public
+    command: /bin/sh -c "composer install --no-interaction && chown -R www-data:www-data * && php artisan migrate --force && apache2-foreground "
+    restart: always
+    depends_on:
+      - db
+  
+  vue:
+    container_name: vue
+    image: node:20.8.1-bullseye-slim
+    working_dir: /usr/src/app
+    volumes:
+      - ./frontend-vue:/usr/src/app
+    ports:
+      - 80:3000
+    environment:
+      - WATCHPACK_POLLING=true
+    command: sh -c "npm install && npm run dev"
+
+  db:
+    container_name: db
+    image: mysql:8.2.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: unbonprojecte
+      MYSQL_USER: usuari
+      MYSQL_PASSWORD: 1234
+    ports:
+      - 3306:3306
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+      - ./mysql/dades.sql:/docker-entrypoint-initdb.d/dades.sql
