@@ -5,6 +5,6 @@ import { RouterLink } from 'vue-router'
 <template>
   <div>ET DONEM LA BENVINGUDA A LA PORTADA</div>
   <div>
-    <RouterLink to="/about">LLISTAT ACTORS I ACTRIUS</RouterLink>
+    <RouterLink to="/llistat">LLISTAT ACTORS I ACTRIUS</RouterLink>
   </div>
 </template>
