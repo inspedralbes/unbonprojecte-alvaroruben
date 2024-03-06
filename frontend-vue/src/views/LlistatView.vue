@@ -28,7 +28,7 @@ export default {
       });
 
       const jsonResponse = await response.json();
-      console.log("items", jsonResponse);
+      console.log("interpretes", jsonResponse);
       this.arrayItems = jsonResponse;    
     },
   }
