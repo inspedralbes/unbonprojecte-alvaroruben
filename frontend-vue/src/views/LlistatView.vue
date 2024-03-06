@@ -90,7 +90,7 @@ h2 {
 
 p {
   margin: 0;
-  color: #111110;
+  color: #353532;
 }
 
 @media (max-width: 768px) {
