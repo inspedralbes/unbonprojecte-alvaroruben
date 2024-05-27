@@ -13,7 +13,7 @@ El projecte s'ha de poder desplegar en mode desenvolupament simplement fent dock
  * Nom dels integrants
  * Nom del projecte
  * Petita descripció
- * Adreça del gestor de tasques (taiga, jira, trello...)
+ * Adreça del gestor de tasques (taiga, jira, trello...): https://tree.taiga.io/project/a20rubdelsan-prova-alvaroruben/timeline
  * Adreça del prototip gràfic del projecte (Penpot, figma, moqups...)
  * URL de producció (quan la tingueu)
- * Estat: (explicació d'en quin punt està)
+ * Estat: (explicació d'en quin punt està)lo 
